@@ -1,3 +1,8 @@
 section{
   display: flex;
+  justify-content: center;
+}
+.clockdata {
+  color:#3ec658;
+  font-size: 3em;
 }
