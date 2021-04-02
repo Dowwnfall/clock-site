@@ -1,29 +1,30 @@
 
 const clock = function() {
-  // const options = {
-  //   hour: 'numeric',
-  //   minute: 'numeric',
-  //   day: 'numeric',
-  //   month: 'numeric',
-  //   year: 'numeric',
-  //   // weekday: 'long',
-  // };
+  const hoursMinutes = {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  const monthDay = {
+    month: 'numeric',
+    day: 'numeric',
+
+  }
   let newdate = new Date();
 
+  const locale = navigator.language;
   const currentTime = function() {
     newdate = new Date();
-    const hours = formatDate(newdate.getHours());
-    const minutes = formatDate(newdate.getMinutes());
-    const seconds = formatDate(newdate.getSeconds());
-    const month = formatDate(newdate.getMonth());
-    const day = formatDate(newdate.getDay());
-    document.querySelector('.monthDay').innerText = `${month}:${day}`;
-    document.querySelector('.clockdata').innerText = `${hours}:${minutes}:${seconds}`;
+    document.querySelector('.monthDay').innerText = new Intl.DateTimeFormat(locale, monthDay).format(newdate);
+    document.querySelector('.clockdata').innerText = new Intl.DateTimeFormat(locale, hoursMinutes).format(newdate);
     let t = setTimeout(function(){currentTime()} , 1000);
   };
-  const formatDate = (dta) => dta < 10 ? "0" + dta: dta;
-
   currentTime();
+
+// proof that i can change options of the clock with command
+  document.querySelector('.clickMe').addEventListener('click', (e) => monthDay.month =  'long');
+
+
 }
 clock();
 
