@@ -1,8 +1,36 @@
+:root{
+  --bg-color: #1f1d1d;
+  --main-color: #df406b;
+  --main-font: 'Montserrat', sans-serif;
+}
+
+body{
+  margin:0;
+  background-color: var(--bg-color);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 90vh;
+    font-family: var(--main-font);
+}
 section{
+  height: 20em;
+  width: 20em;
   display: flex;
   justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 4px dotted var(--main-color);
+  border-radius: 20em;
 }
-.clockdata {
-  color:#3ec658;
+.clockdata, .monthDay {
+  color:var(--main-color);
   font-size: 3em;
+  text-align: center;
+  margin: 15px 0;
 }
