@@ -3,7 +3,10 @@
   --main-color: #df406b;
   --main-font: 'Montserrat', sans-serif;
 }
-
+.hidden{
+  display: none;
+  transition: .5s
+}
 body{
   margin:0;
   background-color: var(--bg-color);
@@ -17,7 +20,7 @@ main{
     height: 90vh;
     font-family: var(--main-font);
 }
-section{
+main section#clock{
   height: 20em;
   width: 20em;
   display: flex;
@@ -33,4 +36,17 @@ section{
   font-size: 3em;
   text-align: center;
   margin: 15px 0;
+}
+section#options {
+  /* display: none; */
+  position: absolute;
+  top:0;
+  right: 10vw;
+}
+section#options li{
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size:3em;
+  list-style: none;
+  transition: .5s
 }
