@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Clock</title>
   </head>
-  <body>
+  <body class="background0" id="b">
     <main>
       <section id='clock'>
         <p class='monthDay'></p>
         <p class="clockdata"></p>
       </section>
+      <section>
+        <button type="button" name="button" class="helpButton">help</button>
+        <button type="button" name="button" class="optionsButton">options</button>
+      </section>
     </main>
-
-    <button type="button" name="button" class="clickMe">click me!</button>
+    <section id='help' class="hidden">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
     <section id='options' class='hidden'>
       <ul>
         <li id="switchMonth">Switch Month</li>
         <li id="switchDay">Switch Day</li>
+        <li id='switchBackground'>Background</li>
         <li><input type="text" maxlength="7" minlength="4" placeholder="Main Color(Hex)" id="mainColor"><input type="submit" value="Submit" id="mainColorSubmit"></li>
       </ul>
     </section>

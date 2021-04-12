@@ -1,20 +1,51 @@
 :root{
-  --bg-color: #1f1d1d;
   --main-color: #df406b;
   --main-font: 'Montserrat', sans-serif;
 }
-.hidden{
-  display: none;
-  transition: .5s
+.background0{
+  background: #171b1b;
 }
-body{
+.background1{
+  background: url('../images/bg-0.jpeg');
+}
+.background2{
+  background: url('../images/bg-1.jpeg');
+}
+.background3{
+  background: url('../images/bg-2.jpeg');
+}
+.background3{
+  background: url('../images/bg-3.jpeg');
+}
+.hidden{
+  width: 0;
+  transition: .5s;
+}
+.menu-on {
+  width:500px;
+  transition:.5s;
+  padding-left: 30px;
+}
+body#b{
   margin:0;
-  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(255, 0, 0, 0.7);
 }
 main{
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
     flex-direction: column;
     margin: 0 auto;
     height: 90vh;
@@ -27,7 +58,7 @@ main section#clock{
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 20px auto;
   border: 4px dotted var(--main-color);
   border-radius: 20em;
 }
@@ -41,7 +72,8 @@ section#options {
   /* display: none; */
   position: absolute;
   top:0;
-  right: 10vw;
+  right: 0;
+  overflow-x: hidden;
 }
 section#options li{
   font-family: var(--main-font);
@@ -49,4 +81,15 @@ section#options li{
   font-size:3em;
   list-style: none;
   transition: .5s
+}
+section#help {
+  /* display: none; */
+  font-family: var(--main-font);
+  color: var(--main-color);
+
+  font-size:1em;
+  position: absolute;
+  top:0;
+  left: 0;
+  overflow-x: hidden;
 }
